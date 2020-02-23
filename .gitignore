@@ -1,2 +1,4 @@
 .DS_Store
-bot_brain.brn
+.brain
+.history
+*.pyc
