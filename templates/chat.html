@@ -73,7 +73,7 @@
                         <div class="panel-footer">
                             <form method="post" id="chatbot-form">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Enter Message" name="messageText" id="messageText" autofocus/>
+                                    <input type="text" class="form-control" placeholder="Enter Message" name="msg" id="msg" autofocus/>
                                     <span class="input-group-btn">
                                         <button class="btn btn-info" type="button" id="chatbot-form-btn">Send</button>
                                         <button class="btn btn-info" type="button" id="chatbot-form-btn-clear">Clear</button>
@@ -118,7 +118,7 @@
                 };
                 var onFinalised = function (text) {
                     console.log('Finalised text: ', text);
-                    $('#messageText').val(text);
+                    $('#msg').val(text);
                 };
                 var onFinishedListening = function () {
                     // $('#chatbot-form-btn').click();
@@ -130,7 +130,7 @@
 
                     setTimeout(function () {
                         listener.stopListening();
-                        if ($('#messageText').val()) {
+                        if ($('#msg').val()) {
                             $('#chatbot-form-btn').click();
                         }
                     }, 5000);
@@ -141,15 +141,15 @@
 
             $('#chatbot-form').submit(function(e) {
                 e.preventDefault();
-                var message = $('#messageText').val();
+                var message = $('#msg').val();
                 $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div style = "text-align:right; color : #2EFE2E" class="media-body">' + message + '<hr/></div></div></div></li>');
 
                 $.ajax({
                     type: "POST",
-                    url: "/ask",
+                    url: "/",
                     data: $(this).serialize(),
                     success: function(response) {
-                        $('#messageText').val('');
+                        $('#msg').val('');
                         var answer = response.answer;
                         const chatPanel = document.getElementById("chatPanel");
                         $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div style = "color : white" class="media-body">' + answer + '<hr/></div></div></div></li>');
