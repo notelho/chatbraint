@@ -1,35 +1,35 @@
-# import aiml
-
-# # Create the kernel and learn AIML files
-# kernel = aiml.Kernel()
-# kernel.learn("std-startup.xml")
-# kernel.respond("load aiml b")
-
-# # Press CTRL-C to break this loop
-# while True:
-#     print kernel.respond(raw_input("Enter your message >> "))
-
+from flask import Flask, render_template, request, jsonify
 import aiml
 import os
 
-kernel = aiml.Kernel()
+app = Flask(__name__)
 
-if os.path.isfile("bot_brain.brn"):
-    kernel.bootstrap(brainFile = "bot_brain.brn")
-else:
-    kernel.bootstrap(learnFiles = "std-startup.xml", commands = "load aiml b")
-    kernel.saveBrain("bot_brain.brn")
+@app.route("/")
+def hello():
+    return render_template('chat.html')
 
-# kernel now ready for use
-while True:
-    print kernel.respond(raw_input("Enter your message >> "))
+@app.route("/ask", methods=['POST'])
+def ask():
+	message = request.form['messageText'].encode('utf-8').strip()
 
-    while True:
-        message = raw_input("Enter your message to the bot: ")
-        if message == "quit":
-            exit()
-        elif message == "save":
-            kernel.saveBrain("bot_brain.brn")
-        else:
-            bot_response = kernel.respond(message)
-            # Do something with bot_response
+	kernel = aiml.Kernel()
+
+	if os.path.isfile("bot_brain.brn"):
+	    kernel.bootstrap(brainFile = "bot_brain.brn")
+	else:
+	    kernel.bootstrap(learnFiles = os.path.abspath("aiml/std-startup.xml"), commands = "load aiml b")
+	    kernel.saveBrain("bot_brain.brn")
+
+	# kernel now ready for use
+	while True:
+	    if message == "quit":
+	        exit()
+	    elif message == "save":
+	        kernel.saveBrain("bot_brain.brn")
+	    else:
+	        bot_response = kernel.respond(message)
+	        # print bot_response
+	        return jsonify({'status':'OK','answer':bot_response})
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=True)
