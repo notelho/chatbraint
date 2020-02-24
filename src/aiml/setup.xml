@@ -2,7 +2,7 @@
     <category>
         <pattern>LOAD PORTUGUESE F</pattern>
         <template>
-            <learn>src/aiml/portuguese/tests.aiml</learn>
+            <learn>src/aiml/portuguese/moretests.aiml</learn>
         </template>
     </category>
 </aiml>
