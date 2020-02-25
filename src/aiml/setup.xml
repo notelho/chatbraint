@@ -1,8 +1,0 @@
-<aiml version="1.0">
-    <category>
-        <pattern>LOAD PORTUGUESE F</pattern>
-        <template>
-            <learn>src/aiml/portuguese/moretests.aiml</learn>
-        </template>
-    </category>
-</aiml>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+    <meta name="author" content="Nathan Botelho"/>
+    <meta name="language" content="en"/>
+
+    <category>
+        <pattern> A * IS A * </pattern>
+        <template>
+            When a <star index="1"/> is not a <star index="2"/>?
+        </template>
+    </category>
+
+
+<!-- <category>
+<pattern>HI THERE *</pattern>
+<template>
+<sr/>  <srai>HELLO</srai>
+</template>
+</category> -->
+
+
+    <category>
+    <pattern>* BYE</pattern>
+    <template>
+    <srai>BYE</srai>
+    </template>
+    </category>
+
+    <category>
+    <pattern>_ BYE</pattern>
+    <template>
+    <srai>BYE</srai>
+    </template>
+    </category>
+
+
+    <category>
+    <pattern>BY</pattern>
+    <template>
+    Do you mean "bye"?
+    </template>
+    </category>
+
+</aiml>

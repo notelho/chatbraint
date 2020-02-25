@@ -1,0 +1,17 @@
+<aiml version="1.0">
+    <category>
+        <pattern>LOAD TESTS FILES</pattern>
+        <template>
+            <learn>src/aiml/tests/condition.aiml</learn>
+            <learn>src/aiml/tests/date.aiml</learn>
+            <learn>src/aiml/tests/formatting.aiml</learn>
+            <learn>src/aiml/tests/input.aiml</learn>
+            <learn>src/aiml/tests/random.aiml</learn>
+            <learn>src/aiml/tests/srai.aiml</learn>
+            <learn>src/aiml/tests/stars.aiml</learn>
+            <learn>src/aiml/tests/tests.aiml</learn>
+            <learn>src/aiml/tests/that.aiml</learn>
+            <learn>src/aiml/tests/think.aiml</learn>
+        </template>
+    </category>
+</aiml>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+    <meta name="author" content="Nathan Botelho"/>
+    <meta name="language" content="en"/>
+
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            <random>
+                <li> Hello! </li>
+                <li> Hi! Nice to meet you! </li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELLO1</pattern>
+        <template>
+            <random>
+                <li>Well hello there!</li>
+                <li>Hi there!</li>
+                <li>Hi there. I was just wanting to talk to <get name="name"/>.</li>
+                <li>Hello there <get name="name"/>!</li>
+                <li>Oh, hello again!</li>
+            </random>
+        </template>
+    </category>
+
+</aiml>

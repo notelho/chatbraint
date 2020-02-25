@@ -8,8 +8,8 @@ class Bot:
         self.__kernel = aiml.Kernel()
         self.__hasBrain = False
         self.__brain = '.brain/bot_brain.brn'
-        self.__command = 'LOAD PORTUGUESE F'
-        self.__aiml = 'src/aiml/setup.xml'
+        self.__command = 'LOAD STARTUP FILES'
+        self.__aiml = 'src/aiml/tests.xml'
         # self.__command = 'load aiml b'
         # self.__aiml = 'src/aiml/std-startup.xml'
 
@@ -21,6 +21,24 @@ class Bot:
             self.__kernel.bootstrap(learnFiles = os.path.abspath(self.__aiml), commands = self.__command)
             self.__kernel.saveBrain(self.__brain)
             self.__hasBrain = True
+
+        # def getSessionData(self, sessionID = None):
+
+        # setTextEncoding(self, encoding):
+        # """Set the text encoding used when loading AIML files (Latin-1, UTF-8, etc.)."""
+
+    #     def getBotPredicate(self, name):
+    #     """Retrieve the value of the specified bot predicate.
+    #     If name is not a valid bot predicate, the empty string is returned.        
+    #     """
+
+
+    # def setBotPredicate(self, name, value):
+    #     """Set the value of the specified bot predicate.
+
+    #     If name is not a valid bot predicate, it will be created.
+
+
         return self.__hasBrain
 
     def loaded(self):

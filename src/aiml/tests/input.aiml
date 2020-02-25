@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+    <meta name="author" content="Nathan Botelho"/>
+    <meta name="language" content="en"/>
+
+    <category>
+        <pattern>I AM *</pattern>
+        <template>
+            Hello <set name="username"><star/></set>!
+        </template>  
+    </category>  
+
+    <category>
+        <pattern>GOOD NIGHT</pattern>
+        <template>
+            Thanks for the conversation, <formal><get name="username"/></formal>!
+        </template>  
+    </category>
+
+
+<!-- <category>
+<pattern>HELLO</pattern>
+<template>
+<condition>
+<li name="name" value="">What can I call you?</li>
+<li><srai>HELLO1</srai></li>
+</condition>
+</template>
+</category> -->
+
+<!-- <category>
+<pattern>HI <bot name="name"/></pattern>
+<template>
+<srai>HELLO</srai>
+</template>
+</category> -->
+
+</aiml>
