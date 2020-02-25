@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+    <meta name="author" content="Nathan Botelho"/>
+    <meta name="language" content="en"/>
+
+    <category>
+        <pattern> * </pattern>
+        <template>
+            cant get that
+        </template>
+    </category>
+
+</aiml>

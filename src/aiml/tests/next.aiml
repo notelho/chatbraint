@@ -1,0 +1,25 @@
+ 
+<img><src> http://alicebot.org/logo.jpg/ </src></img>
+
+<get name="age"/>
+- may also be written as -
+<get><name>age</name></get>
+
+<condition name="job" value="manager">Hi, boss!</condition>
+- may also be written as -
+<condition><name>job</name><value>manager</value>Hi, Boss!</condition>
+
+<date format="%D %H"/>
+- may also be written as -
+<date><format>%D %H</format></date>
+
+<get><name><srai>PREDICATE NAME</srai></name></get>
+<condition><name>job</name><value><get><name>profession</name></get></value>Hi, Boss!</condition>
+<date><format><get name="localdateformat"/></format></date>
+
+<button>
+  <text>Pandorabots Home</text>
+  <url>https://www.pandorabots.com </url>
+</button>
+
+ 

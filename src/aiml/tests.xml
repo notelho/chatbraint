@@ -12,6 +12,8 @@
             <learn>src/aiml/tests/tests.aiml</learn>
             <learn>src/aiml/tests/that.aiml</learn>
             <learn>src/aiml/tests/think.aiml</learn>
+            <learn>src/aiml/tests/topic.aiml</learn>
+            <learn>src/aiml/tests/default.aiml</learn>
         </template>
     </category>
 </aiml>

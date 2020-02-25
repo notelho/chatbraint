@@ -1,21 +1,22 @@
-<topic name="ASKING TO ADD NEW CONTACTNAME">
-<category>
-<pattern>YES</pattern><that>WOULD YOU LIKE TO ADD * AS A CONTACT</that>
-<template>
-<think><set name="topic">unknown</set>
-<set name="contactid"><srai>NEWCONTACTID</srai></set>
-<set name="displayname"><get name="contactname"/></set>
-</think>
-<srai>LEARN CONTACTID <get name="contactid"/> DISPLAYNAME <get name="displayname"/></srai>
-I've saved <get name="contactname"/> to your contacts.
-<srai>RESUMEACTION <get name="modecom"/></srai>
-</template>
-</category>
-<category>
-<pattern>*</pattern><that>WOULD YOU LIKE TO ADD * AS A CONTACT</that>
-<template>
-<think><set name="topic">unknown</set></think>
-<srai>CONTACTFINALIZE</srai> <srai><star/></srai>
-</template>
-</category>
-</topic>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+    <meta name="author" content="Nathan Botelho"/>
+    <meta name="language" content="en"/>
+
+    <category>
+        <pattern>LET DISCUSS MOVIES</pattern>
+        <template>Yes <set name="topic">movies</set></template>  
+    </category>
+
+    <topic name="MOVIES">
+        <category>
+            <pattern> * </pattern>
+            <template>Watching good movie refreshes our minds.</template>
+        </category>
+        <category>
+            <pattern> I LIKE WATCHING COMEDY! </pattern>
+            <template>I like comedy movies too.</template>
+        </category>
+    </topic>
+
+</aiml>
