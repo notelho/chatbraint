@@ -19,3 +19,24 @@
 #     else:
 #         bot_response = kernel.respond(message)
 #         print bot_response
+
+
+# ==================================
+
+# def getSessionData(self, sessionID = None):
+
+# setTextEncoding(self, encoding):
+# """
+# Set the text encoding used when loading AIML files (Latin-1, UTF-8, etc.).
+# """
+
+# def getBotPredicate(self, name):
+# """
+# Retrieve the value of the specified bot predicate.
+# If name is not a valid bot predicate, the empty string is returned.
+# """
+
+# def setBotPredicate(self, name, value):
+# """Set the value of the specified bot predicate.
+# If name is not a valid bot predicate, it will be created.
+# """
