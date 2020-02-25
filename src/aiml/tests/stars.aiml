@@ -10,35 +10,4 @@
         </template>
     </category>
 
-
-<!-- <category>
-<pattern>HI THERE *</pattern>
-<template>
-<sr/>  <srai>HELLO</srai>
-</template>
-</category> -->
-
-
-    <category>
-    <pattern>* BYE</pattern>
-    <template>
-    <srai>BYE</srai>
-    </template>
-    </category>
-
-    <category>
-    <pattern>_ BYE</pattern>
-    <template>
-    <srai>BYE</srai>
-    </template>
-    </category>
-
-
-    <category>
-    <pattern>BY</pattern>
-    <template>
-    Do you mean "bye"?
-    </template>
-    </category>
-
 </aiml>

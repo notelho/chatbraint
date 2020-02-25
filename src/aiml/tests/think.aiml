@@ -2,4 +2,33 @@
 <aiml version="1.0">
     <meta name="author" content="Nathan Botelho"/>
     <meta name="language" content="en"/>
+
+    <category>
+        <pattern> I LIKE YOU </pattern>
+        <template>
+            <think><set name="state">happy</set></think>
+            I like you too!
+        </template>
+    </category>
+
+    <category>
+        <pattern> I HATE YOU </pattern>
+        <template>
+            <think><set name="state">sad</set></think>
+            :'(
+        </template>
+    </category>
+
+    <category>
+            <pattern> HOW ARE YOU FEELING </pattern>
+            <template>
+                <condition name="state" value="happy">
+                    I am happy!
+                </condition>
+                <condition name="state" value="sad">
+                    I am sad!
+                </condition>
+            </template>
+    </category>
+
 </aiml>

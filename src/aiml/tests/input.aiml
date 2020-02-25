@@ -4,35 +4,17 @@
     <meta name="language" content="en"/>
 
     <category>
-        <pattern>I AM *</pattern>
+        <pattern>MY NAME IS *</pattern>
         <template>
             Hello <set name="username"><star/></set>!
         </template>  
-    </category>  
-
-    <category>
-        <pattern>GOOD NIGHT</pattern>
-        <template>
-            Thanks for the conversation, <formal><get name="username"/></formal>!
-        </template>  
     </category>
 
-
-<!-- <category>
-<pattern>HELLO</pattern>
-<template>
-<condition>
-<li name="name" value="">What can I call you?</li>
-<li><srai>HELLO1</srai></li>
-</condition>
-</template>
-</category> -->
-
-<!-- <category>
-<pattern>HI <bot name="name"/></pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category> -->
+    <category>
+        <pattern>WHAT IS MY NAME</pattern>
+        <template>
+            your name is <formal><get name="username"/></formal>
+        </template>  
+    </category>
 
 </aiml>

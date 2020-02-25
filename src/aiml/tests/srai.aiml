@@ -2,4 +2,33 @@
 <aiml version="1.0">
     <meta name="author" content="Nathan Botelho"/>
     <meta name="language" content="en"/>
+
+    <category>
+        <pattern>* BYE</pattern>
+        <template>
+            <srai>BYE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>BYE *</pattern>
+        <template>
+            <srai>BYE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>BYE</pattern>
+        <template>
+            see ya
+        </template>
+    </category>
+
+    <category>
+        <pattern>BY</pattern>
+        <template>
+            Do you mean "bye" or something like that?
+        </template>
+    </category>
+
 </aiml>

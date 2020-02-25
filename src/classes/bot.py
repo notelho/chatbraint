@@ -8,7 +8,7 @@ class Bot:
         self.__kernel = aiml.Kernel()
         self.__hasBrain = False
         self.__brain = '.brain/bot_brain.brn'
-        self.__command = 'LOAD STARTUP FILES'
+        self.__command = 'LOAD TESTS FILES'
         self.__aiml = 'src/aiml/tests.xml'
         # self.__command = 'load aiml b'
         # self.__aiml = 'src/aiml/std-startup.xml'

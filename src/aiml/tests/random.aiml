@@ -19,8 +19,8 @@
             <random>
                 <li>Well hello there!</li>
                 <li>Hi there!</li>
-                <li>Hi there. I was just wanting to talk to <get name="name"/>.</li>
-                <li>Hello there <get name="name"/>!</li>
+                <!-- <li>Hi there. I was just wanting to talk to <get name="name"/>.</li> -->
+                <!-- <li>Hello there <get name="name"/>!</li> -->
                 <li>Oh, hello again!</li>
             </random>
         </template>
