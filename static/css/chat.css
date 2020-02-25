@@ -1,4 +1,4 @@
-html,body {
+html, body {
     width: 100vw;
     height: 100vh;
     padding: 0;
@@ -8,26 +8,31 @@ html,body {
     display: flex;
     justify-content: center;
     align-items: center;
-}   
+}
 
 .fixed-panel {
     min-height: 400px;
     max-height: 400px;
+    width: 500px;
     background-color: #101010;
     color: white;
     overflow: auto;
 }
+
 .fixed-panel::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
+
 .fixed-panel::-webkit-scrollbar-track {
-    box-shadow: none; 
+    box-shadow: none;
     border-radius: 6px;
 }
+
 .fixed-panel::-webkit-scrollbar-thumb {
-    background: #303030; 
+    background: #303030;
 }
+
 .fixed-panel::-webkit-scrollbar-thumb:hover {
     background: #404040;
 }
@@ -40,9 +45,22 @@ html,body {
     word-wrap: break-word;
     word-break: normal;
     line-break: strict;
-}   
+}
 
-.panel, .panel-footer{
+.media-user {
+    text-align: right;
+    color: #31b0d5;
+}
+
+.media-bot {
+    color: white;
+}
+
+.media-bot, .media-user, .media-list{
+    width: 100%;
+}
+
+.panel, .panel-footer {
     background-color: #303030;
     color: white;
     border-top: none;
