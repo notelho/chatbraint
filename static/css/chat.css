@@ -1,0 +1,49 @@
+html,body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: #101010;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.fixed-panel {
+    min-height: 400px;
+    max-height: 400px;
+    background-color: #101010;
+    color: white;
+    overflow: auto;
+}
+.fixed-panel::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.fixed-panel::-webkit-scrollbar-track {
+    box-shadow: none; 
+    border-radius: 6px;
+}
+.fixed-panel::-webkit-scrollbar-thumb {
+    background: #303030; 
+}
+.fixed-panel::-webkit-scrollbar-thumb:hover {
+    background: #404040;
+}
+
+.media-list {
+    overflow: auto;
+    clear: both;
+    display: table;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: normal;
+    line-break: strict;
+}   
+
+.panel, .panel-footer{
+    background-color: #303030;
+    color: white;
+    border-top: none;
+}
